@@ -1,0 +1,19 @@
+{
+  "name": "recipeweb",
+  "version": "1.0.0",
+  "description": "Backend para el proyecto de la red social de recetas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaicabher1/RecipeWeb.git"
+  },
+  "author": "Jaime Caballero Hernadez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jaicabher1/RecipeWeb/issues"
+  },
+  "homepage": "https://github.com/jaicabher1/RecipeWeb#readme"
+}
