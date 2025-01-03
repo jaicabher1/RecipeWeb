@@ -6,6 +6,8 @@ var User = require('../models/user');
 
 var jwt = require('../services/jwt');
 
+
+
 function home(req, res){
     res.status(200).send({message: 'Hola Munda desde el servidor de NodeJS'});
 };
@@ -126,6 +128,29 @@ function getUser(req, res) {
         }); 
 }
 
+//Devolver usuarios paginados
+function getUsers(req, res) {
+    var identity_user_id = req.user.sub;
+    var page = req.params.page || 1; // Página por defecto
+    var itemsPerPage = 5; // Número de usuarios por página
+
+    User.find().sort('_id').paginate(page, itemsPerPage, (err, users, total) => {
+        if (err) {
+            console.error(err);
+            return res.status(500).send({ message: 'Error en la petición' });
+        }
+
+        if (!users) {
+            return res.status(404).send({ message: 'No hay usuarios disponibles' });
+        }
+
+        return res.status(200).send({
+            users,
+            total,
+            pages: Math.ceil(total / itemsPerPage)
+        });
+    });
+}
 
 
 //Exportar las funciones para que esten disponibles en otros archivos
@@ -134,7 +159,8 @@ module.exports = {
     pruebas,
     saveUser,
     loginUser,
-    getUser
+    getUser,
+    getUsers
 };  
 
 
