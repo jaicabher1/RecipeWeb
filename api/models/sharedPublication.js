@@ -6,7 +6,7 @@ var Schema = mongoose.Schema;
 var SharedPublicationSchema = Schema({
 
     // El usuario que envia la publicación
-    emisor : { type: Schema.ObjectId, ref: 'User' },
+    emitter : { type: Schema.ObjectId, ref: 'User' },
     // El usuario que recibe la publicación
     receiver : { type: Schema.ObjectId, ref: 'User' },
     // La publicación que se enviará
