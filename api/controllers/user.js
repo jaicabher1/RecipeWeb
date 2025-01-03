@@ -4,6 +4,7 @@ var bcrypt = require('bcrypt-nodejs');
 
 var User = require('../models/user');
 const e = require('express');
+const user = require('../models/user');
 
 function home(req, res){
     res.status(200).send({message: 'Hola Munda desde el servidor de NodeJS'});
@@ -72,12 +73,39 @@ function saveUser(req, res) {
     }
 }
 
+function loginUser(req, res) {
+    var params = req.body;
+
+    var email = params.email;
+    var password = params.password;
+
+    User.findOne({
+        email: email
+    }).then(user => {
+        if (user) {
+            bcrypt.compare(password, user.password, (err, check) => {
+                if (check) {
+                    res.status(200).send({ user });
+                } else {
+                    res.status(404).send({ message: 'El usuario no se ha podido loguear' });
+                }
+            });
+        } else {
+            res.status(404).send({ message: 'No existe el usuario!!!' });
+        }
+    }).catch(err => {
+        console.error(err);
+        res.status(500).send({ message: 'Error en la petición' });
+    });
+
+}
 
 //Exportar las funciones para que esten disponibles en otros archivos
 module.exports = {
     home,
     pruebas,
-    saveUser
+    saveUser,
+    loginUser
 };  
 
 
