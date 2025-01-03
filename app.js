@@ -19,6 +19,10 @@ app.get('/', (req, res) => {
     res.status(200).send({message: 'Hola Munda desde el servidor de NodeJS'});
 });
 
+app.get('/pruebas', (req, res) => {
+    res.status(200).send({message: 'Accion de pruebas en el servidor de NodeJS'});
+});
+
 // Exportar
 
 module.exports = app;
