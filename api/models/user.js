@@ -20,8 +20,8 @@ var UserSchema = new Schema({
     password: { type: String, required: true },
     role: { 
         type: String, 
-        enum: ['user', 'admin', 'moderator'], 
-        default: 'user' 
+        enum: ['ROLE_ADMIN', 'ROLE_USER'], 
+        default: 'ROLE_USER' 
     },
     bio: { type: String, maxlength: 250 }, 
     location: { type: String, trim: true },
