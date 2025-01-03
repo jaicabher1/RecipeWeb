@@ -3,6 +3,7 @@
 'use strict';
 
 var mongoose = require('mongoose');
+var mongoosePaginate = require('mongoose-paginate-v2');
 var Schema = mongoose.Schema;
 
 var UserSchema = new Schema({
@@ -34,5 +35,8 @@ var UserSchema = new Schema({
     },
     createdAt: { type: Date, default: Date.now }
 });
+
+// Aplica el plugin mongoose-paginate-v2 a tu esquema
+UserSchema.plugin(mongoosePaginate);
 
 module.exports = mongoose.model('User', UserSchema);

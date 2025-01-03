@@ -128,29 +128,35 @@ function getUser(req, res) {
         }); 
 }
 
-//Devolver usuarios paginados
+// Devolver usuarios paginados
 function getUsers(req, res) {
-    var identity_user_id = req.user.sub;
-    var page = req.params.page || 1; // Página por defecto
-    var itemsPerPage = 5; // Número de usuarios por página
+    const identity_user_id = req.user.sub;
+    let page = parseInt(req.params.page, 10) || 1; // Página por defecto
+    const itemsPerPage = 5; // Número de usuarios por página
 
-    User.find().sort('_id').paginate(page, itemsPerPage, (err, users, total) => {
-        if (err) {
+    // Asegúrate de usar el método paginate correcto
+    User.paginate({}, { page: page, limit: itemsPerPage, sort: { _id: 1 } })
+        .then(result => {
+            if (!result || result.docs.length === 0) {
+                return res.status(404).send({ message: 'No hay usuarios disponibles' });
+            }
+
+            // Total de usuarios y páginas
+            const totalUsers = result.totalDocs;
+            const totalPages = Math.ceil(totalUsers / itemsPerPage); 
+
+            return res.status(200).send({
+                users: result.docs,
+                total: totalUsers,
+                pages: totalPages,
+            });
+        })
+        .catch(err => {
             console.error(err);
             return res.status(500).send({ message: 'Error en la petición' });
-        }
-
-        if (!users) {
-            return res.status(404).send({ message: 'No hay usuarios disponibles' });
-        }
-
-        return res.status(200).send({
-            users,
-            total,
-            pages: Math.ceil(total / itemsPerPage)
         });
-    });
 }
+
 
 
 //Exportar las funciones para que esten disponibles en otros archivos
