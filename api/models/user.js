@@ -8,15 +8,16 @@ var Schema = mongoose.Schema;
 var UserSchema = new Schema({
     name: { type: String, required: true, trim: true },
     surname: { type: String, trim: true },
+    //Validacion email repetido esta en el controlador
     email: { 
         type: String, 
-        required: true, 
-        unique: true, 
+        required: true,  
         trim: true, 
         lowercase: true,
         match: [/^\S+@\S+\.\S+$/, 'Por favor, ingresa un email válido.']
     },
-    nick: { type: String, required: true, unique: true, trim: true },
+    //Validacion nick repetido esta en el controlador
+    nick: { type: String, required: true, trim: true },
     password: { type: String, required: true },
     role: { 
         type: String, 
