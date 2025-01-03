@@ -109,12 +109,32 @@ function loginUser(req, res) {
 
 }
 
+function getUser(req, res) {
+    var userId = req.params.id;
+
+    User.findById(userId)
+        .then(user => {
+            if (user) {
+                res.status(200).send({ user });
+            } else {
+                res.status(404).send({ message: 'El usuario no existe' });
+            }
+        })
+        .catch(err => {
+            console.error(err);
+            res.status(500).send({ message: 'Error en la petición' });
+        }); 
+}
+
+
+
 //Exportar las funciones para que esten disponibles en otros archivos
 module.exports = {
     home,
     pruebas,
     saveUser,
-    loginUser
+    loginUser,
+    getUser
 };  
 
 
