@@ -182,11 +182,10 @@ function updateUser(req, res) {
         });
 }
 
+const fs = require('fs');
+
 function uploadImage(req,res) {
     var userId = req.params.id;
-    if(userId != req.user.sub){
-        return res.status(500).send({message: 'No tienes permiso para actualizar los datos del usuario'});
-    }
 
     if(req.files) {
         var file_path = req.files.image.path;
@@ -213,7 +212,7 @@ function uploadImage(req,res) {
                 }
             });
     } else {
-        removeFilesOfUploads(res, file_path, 'Extensión no válida');
+        return removeFilesOfUploads(res, file_path, 'Extensión no válida');
     }
 }
 
