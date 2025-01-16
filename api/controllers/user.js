@@ -5,6 +5,7 @@ var bcrypt = require('bcrypt-nodejs');
 var User = require('../models/user');
 
 var jwt = require('../services/jwt');
+const user = require('../models/user');
 
 
 
@@ -181,7 +182,47 @@ function updateUser(req, res) {
         });
 }
 
+function uploadImage(req,res) {
+    var userId = req.params.id;
+    if(userId != req.user.sub){
+        return res.status(500).send({message: 'No tienes permiso para actualizar los datos del usuario'});
+    }
 
+    if(req.files) {
+        var file_path = req.files.image.path;
+        console.log(file_path);
+        var file_split = file_path.split('\\');
+        console.log(file_split);
+        var file_name = file_split[2];
+        console.log(file_name);
+        var ext_split = file_name.split('\.');
+        console.log(ext_split);
+        var file_ext = ext_split[1];
+        console.log(file_ext);
+        if(userId != req.user.sub){
+            return removeFilesOfUploads(res, file_path, 'No tienes permiso para actualizar los datos del usuario');
+        }
+
+        if(file_ext == 'png' || file_ext == 'jpg' || file_ext == 'jpeg' || file_ext == 'gif' || file_ext == 'svg') {
+            //Actualizar documento de usuario logueado
+            User.findByIdAndUpdate(userId, {image:file_name}, {new:true}).then(userUpdated => {
+                if(!userUpdated){
+                    res.status(404).send({message: 'No se ha podido actualizar el usuario'});
+                } else {
+                    res.status(200).send({user: userUpdated, image: file_name});
+                }
+            });
+    } else {
+        removeFilesOfUploads(res, file_path, 'Extensión no válida');
+    }
+}
+
+}
+function removeFilesOfUploads(res, file_path, message){
+    fs.unlink(file_path, (err) => {
+        return res.status(200).send({message: message});
+    });
+}
 
 //Exportar las funciones para que esten disponibles en otros archivos
 module.exports = {
@@ -191,7 +232,8 @@ module.exports = {
     loginUser,
     getUser,
     getUsers,
-    updateUser
+    updateUser,
+    uploadImage
 };  
 
 

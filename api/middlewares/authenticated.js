@@ -11,23 +11,18 @@ exports.ensureAuth = function (req, res, next) {
     }
 
     var token = req.headers.authorization.replace(/['"]+/g, '');
-    console.log('Token recibido:', token);
 
     try {
         var payload = jwt.decode(token, secret);
-        console.log('Payload decodificado:', payload);
-
+    
         if (payload.exp <= moment().unix()) {
-            console.log('Token expirado');
             return res.status(401).send({ message: 'El token ha expirado' });
         }
     } catch (ex) {
-        console.error('Error al decodificar el token:', ex);
         return res.status(404).send({ message: 'El token no es válido' });
     }
 
     req.user = payload;
-    console.log('Payload añadido a req.user:', req.user);
 
     next(); // Llama al siguiente middleware o controlador
 };
