@@ -223,6 +223,21 @@ function removeFilesOfUploads(res, file_path, message){
     });
 }
 
+const path = require('path');
+
+function getImageFile(req, res) {
+    const image_file = req.params.imageFile;
+    const path_file = path.join(__dirname, '../uploads/users', image_file);
+
+    fs.promises.access(path_file, fs.constants.F_OK)
+        .then(() => {
+            res.sendFile(path.resolve(path_file));
+        })
+        .catch(() => {
+            res.status(404).send({ message: 'No existe la imagen...' });
+        });
+}
+
 //Exportar las funciones para que esten disponibles en otros archivos
 module.exports = {
     home,
@@ -232,7 +247,8 @@ module.exports = {
     getUser,
     getUsers,
     updateUser,
-    uploadImage
+    uploadImage,
+    getImageFile
 };  
 
 
