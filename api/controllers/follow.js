@@ -12,16 +12,16 @@ async function saveFollow(req, res) {
         const params = req.body;
         const follow = new Follow();
         follow.user = req.user.sub;
-        follow.follower = params.follower;
+        follow.followed = params.followed;
 
-        const existingUser = await User.findById(follow.follower);
+        const existingUser = await User.findById(follow.followed);
         if (!existingUser) {
             return res.status(404).send({ message: 'El usuario que intentas seguir no existe' });
         }
 
         const existingFollow = await Follow.findOne({
             user: follow.user,
-            follower: follow.follower,
+            followed: follow.followed,
         });
         if (existingFollow) {
             return res.status(200).send({ message: 'Ya sigues a este usuario' });
@@ -42,11 +42,11 @@ async function saveFollow(req, res) {
 async function deleteFollow(req, res) {
     try {
         const userId = req.user.sub; 
-        const followerId = req.params.id;
+        const followedId = req.params.id;
 
         const follow = await Follow.findOneAndDelete({
             user: userId,
-            follower: followerId,
+            followed: followedId,
         });
 
         if (!follow) {
@@ -61,13 +61,12 @@ async function deleteFollow(req, res) {
 }
 
 //Obtener los usuarios que sigo
-async function getFollowingUsers(req, res) {
+async function getMyFollows(req, res) {
     try {
         const userId = req.user.sub; 
-        console.log(userId);
         const follows = await Follow.find({ user: userId })
         .populate({
-            path: 'follower', 
+            path: 'followed', 
             select: 'name' 
         })
         .populate({
@@ -87,13 +86,13 @@ async function getFollowingUsers(req, res) {
 }
 
 //Obtener los usuarios que me siguen
-async function getFollowerUsers(req, res) {
+async function getFollowBacks(req, res) {
     try {
         const userId = req.user.sub; 
         console.log(userId);
-        const follows = await Follow.find({ follower: userId })
+        const follows = await Follow.find({ followed: userId })
         .populate({
-            path: 'follower', 
+            path: 'followed', 
             select: 'name' 
         })
         .populate({
@@ -116,7 +115,7 @@ async function getFollowerUsers(req, res) {
 module.exports = {
     saveFollow,
     deleteFollow,
-    getFollowingUsers,
-    getFollowerUsers
+    getMyFollows,
+    getFollowBacks
 };  
 

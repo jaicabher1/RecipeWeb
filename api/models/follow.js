@@ -8,7 +8,7 @@ var FollowSchema = Schema({
     // El usuario que sigue
     user: { type: Schema.ObjectId, ref: 'User' },
     // El usuario que es seguido
-    follower: { type: Schema.ObjectId, ref: 'User' }
+    followed: { type: Schema.ObjectId, ref: 'User' }
 });
 
 // Aplica el plugin mongoose-paginate-v2 a tu esquema
