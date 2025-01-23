@@ -135,7 +135,6 @@ function getUsers(req, res) {
     let page = parseInt(req.params.page, 10) || 1; // Página por defecto
     const itemsPerPage = 5; // Número de usuarios por página
 
-    // Asegúrate de usar el método paginate correcto
     User.paginate({}, { page: page, limit: itemsPerPage, sort: { _id: 1 } })
         .then(result => {
             if (!result || result.docs.length === 0) {

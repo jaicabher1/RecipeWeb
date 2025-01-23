@@ -1,7 +1,8 @@
 'use strict';
 
-//var path = require('path');
-//var fs = require('fs');
+var path = require('path');
+var fs = require('fs');
+var mongoose = require('mongoose');
 var mongoosePaginate = require('mongoose-paginate-v2');
 var User = require('../models/user');
 var Follow = require('../models/follow');
@@ -59,10 +60,63 @@ async function deleteFollow(req, res) {
     }
 }
 
+//Obtener los usuarios que sigo
+async function getFollowingUsers(req, res) {
+    try {
+        const userId = req.user.sub; 
+        console.log(userId);
+        const follows = await Follow.find({ user: userId })
+        .populate({
+            path: 'follower', 
+            select: 'name' 
+        })
+        .populate({
+            path: 'user', 
+            select: 'name' 
+        });
+        console.log(follows);
+        if (!follows || follows.length === 0) {
+            return res.status(404).send({ message: 'No sigues a ningún usuario' });
+        }
+        return res.status(200).send({ follows });
+
+    } catch (err) {
+        console.error(err);
+        return res.status(500).send({ message: 'Error en el servidor' });
+    }
+}
+
+//Obtener los usuarios que me siguen
+async function getFollowerUsers(req, res) {
+    try {
+        const userId = req.user.sub; 
+        console.log(userId);
+        const follows = await Follow.find({ follower: userId })
+        .populate({
+            path: 'follower', 
+            select: 'name' 
+        })
+        .populate({
+            path: 'user', 
+            select: 'name' 
+        });
+        console.log(follows);
+        if (!follows || follows.length === 0) {
+            return res.status(404).send({ message: 'No sigues a ningún usuario' });
+        }
+        return res.status(200).send({ follows });
+
+    } catch (err) {
+        console.error(err);
+        return res.status(500).send({ message: 'Error en el servidor' });
+    }
+}
 
 //Exportar las funciones para que esten disponibles en otros archivos
 module.exports = {
     saveFollow,
-    deleteFollow
+    deleteFollow,
+    getFollowingUsers,
+    getFollowerUsers
 };  
 

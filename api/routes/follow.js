@@ -9,5 +9,8 @@ var multipart = require('connect-multiparty');
 
 api.post('/follow', md_auth.ensureAuth, FollowController.saveFollow);
 api.delete('/unfollow/:id', md_auth.ensureAuth, FollowController.deleteFollow);
+api.get('/following/:id', md_auth.ensureAuth, FollowController.getFollowingUsers);
+api.get('/followers/:id', md_auth.ensureAuth, FollowController.getFollowerUsers);
+
 
 module.exports = api;
