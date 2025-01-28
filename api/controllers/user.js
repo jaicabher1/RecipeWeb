@@ -148,6 +148,29 @@ async function followThisUser(identity_user_id, user_id) {
     }
 }
 
+async function followUserIds(user_id) {
+    try {
+        const following = await Follow.find({ user: user_id }).select({ _id: 0, __v: 0, user: 0 });
+        const followed = await Follow.find({ followed: user_id }).select({ _id: 0, __v: 0, followed: 0 }).exec();
+        const following_clean = [];
+        following.forEach((follow) => {
+            following_clean.push(follow.followed);
+        });
+        const followed_clean = [];
+        followed.forEach((follow) => {
+            followed_clean.push(follow.user);
+        });
+        return {
+            following: following_clean,
+            followed: followed_clean
+        };
+    } catch (err) {
+        console.error(err);
+        return err;
+    }
+    
+}
+
 // Devolver usuarios paginados
 function getUsers(req, res) {
     const identity_user_id = req.user.sub;
@@ -163,12 +186,16 @@ function getUsers(req, res) {
             // Total de usuarios y páginas
             const totalUsers = result.totalDocs;
             const totalPages = Math.ceil(totalUsers / itemsPerPage); 
-
-            return res.status(200).send({
-                users: result.docs,
-                total: totalUsers,
-                pages: totalPages,
+            followUserIds(identity_user_id).then((value) => {
+                return res.status(200).send({
+                    users: result.docs,
+                    users_following: value.following,
+                    users_follow_me: value.followed,
+                    total: totalUsers,
+                    pages: totalPages,
+                });
             });
+
         })
         .catch(err => {
             console.error(err);
@@ -256,6 +283,27 @@ function getImageFile(req, res) {
         });
 }
 
+function getCounters(req, res){
+    let userId = req.user.sub;
+    if(req.params.id){
+        userId = req.params.id;
+    }
+    getCountFollow(userId).then((value) => {
+        return res.status(200).send(value);
+    });
+}
+
+async function getCountFollow(userId) {
+    var following = await Follow.countDocuments({ user: userId });
+    var followed = await Follow.countDocuments({ followed: userId });
+
+    return {
+        following: following,
+        followed: followed
+    };
+    
+}
+
 //Exportar las funciones para que esten disponibles en otros archivos
 module.exports = {
     home,
@@ -266,7 +314,8 @@ module.exports = {
     getUsers,
     updateUser,
     uploadImage,
-    getImageFile
+    getImageFile,
+    getCounters
 };  
 
 
