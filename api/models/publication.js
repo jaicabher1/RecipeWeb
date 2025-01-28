@@ -13,7 +13,7 @@ var PublicationSchema = Schema({
         enum: ['Desayuno', 'Almuerzo', 'Cena', 'Postre', 'Snack', 'Vegano', 'Vegetariano', 'Sin Gluten', 'Sin Lactosa'], 
         required: true 
     },
-    text: { type: String, required: true },
+    description: { type: String, required: true },
     ingredients: { type: [String], required: true }, 
     steps: { type: String, required: true },
     views: { type: Number, default: 0 },
@@ -25,6 +25,7 @@ var PublicationSchema = Schema({
         type: String, 
         enum: ['Fácil', 'Intermedio', 'Avanzado'], 
         required: true 
+
     },
     prepTime: { type: Number, required: true },
     image: String , 
