@@ -4,6 +4,7 @@ var bcrypt = require('bcrypt-nodejs');
 
 var User = require('../models/user');
 var Follow = require('../models/follow');
+var Publication = require('../models/publication');
 
 var jwt = require('../services/jwt');
 const user = require('../models/user');
@@ -12,10 +13,6 @@ const user = require('../models/user');
 
 function home(req, res){
     res.status(200).send({message: 'Hola Munda desde el servidor de NodeJS'});
-};
-
-function pruebas(req, res){
-    res.status(200).send({message: 'Accion de pruebas en el servidor de NodeJS'});
 };
 
 function saveUser(req, res) { 
@@ -87,8 +84,10 @@ function loginUser(req, res) {
         email: email
     }).then(user => {
         if (user) {
-            bcrypt.compare(password, user.password, (err, check) => {
+            bcrypt.compare(password, user.password, (check) => {
+                console.log(check);
                 if (check) {
+                    
                     if(params.gettoken){
                         //Generar y devolver el token
                         return res.status(200).send({
@@ -211,7 +210,7 @@ function updateUser(req, res) {
     delete update.password;
 
     if (userId != req.user.sub) {
-        return res.status(500).send({ message: 'No tienes permiso para actualizar los datos del usuario' });
+        return res.status(403).send({ message: 'No tienes permiso para actualizar los datos del usuario' });
     }
 
     User.findByIdAndUpdate(userId, update, { new: true })
@@ -296,10 +295,11 @@ function getCounters(req, res){
 async function getCountFollow(userId) {
     var following = await Follow.countDocuments({ user: userId });
     var followed = await Follow.countDocuments({ followed: userId });
-
+    var publications = await Publication.countDocuments({ user: userId });
     return {
         following: following,
-        followed: followed
+        followed: followed,
+        publications: publications
     };
     
 }
@@ -307,7 +307,6 @@ async function getCountFollow(userId) {
 //Exportar las funciones para que esten disponibles en otros archivos
 module.exports = {
     home,
-    pruebas,
     saveUser,
     loginUser,
     getUser,

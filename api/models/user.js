@@ -18,7 +18,7 @@ var UserSchema = new Schema({
         match: [/^\S+@\S+\.\S+$/, 'Por favor, ingresa un email válido.']
     },
     //Validacion nick repetido esta en el controlador
-    nick: { type: String, required: true, trim: true },
+    nick: { type: String, required: true, trim: true, unique: true },
     password: { type: String, required: true },
     role: { 
         type: String, 

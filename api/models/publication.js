@@ -19,7 +19,7 @@ var PublicationSchema = Schema({
     views: { type: Number, default: 0 },
     tags: { 
         type: [String], 
-        enum: ['Rápido', 'Fácil', 'Saludable', 'Económico', 'Internacional', 'Gourmet', 'Tradicional', 'Fiesta', 'Navidad', 'Halloween', 'San Valentín', 'Verano', 'Invierno', 'Otoño', 'Primavera'], 
+        enum: ['Rápido','Vegetariano','Dulce', 'Fácil', 'Saludable', 'Económico', 'Internacional', 'Gourmet', 'Tradicional', 'Fiesta', 'Navidad', 'Halloween', 'San Valentín', 'Verano', 'Invierno', 'Otoño', 'Primavera','Internacional','Sin Gluten','Sin Lactosa','Vegano','Vegetariano'], 
     }, 
     difficulty: { 
         type: String, 

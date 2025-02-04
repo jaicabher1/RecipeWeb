@@ -10,6 +10,7 @@ var MessageSchema = Schema({
     receiver : { type: Schema.ObjectId, ref: 'User' },
     text: String,
     file: String,
+    viewed: String,
     createdAt: {
         type: Date,
         default: Date.now
