@@ -21,7 +21,7 @@ function saveUser(req, res) {
 
     if (params.name && params.email && params.nick && params.password) {
         user.name = params.name;
-        user.surname = null;
+        user.surname = params.surname;
         user.email = params.email.toLowerCase();
         user.nick = params.nick.toLowerCase();
         
