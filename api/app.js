@@ -2,7 +2,7 @@
 
 var express = require('express');
 var bodyParser = require('body-parser');    
-
+const cors = require('cors');
 var app = express();
 
 // Cargar las rutas
@@ -17,6 +17,22 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
 // Cors
+app.use(cors({
+    origin: 'http://localhost:4200', // URL de tu frontend
+    methods: ['GET', 'POST', 'PUT', 'DELETE']}));
+    
+app.use(express.json());
+
+app.get('/api', (req, res) => {
+    res.status(200).send({
+        message: 'Hola mundo desde el servidor de NodeJS'
+    });
+});
+
+app.listen(3000, () => {
+    console.log('Servidor backend corriendo en http://localhost:3000');
+});
+
 // configurar cabeceras http
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
