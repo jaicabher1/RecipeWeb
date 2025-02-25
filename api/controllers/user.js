@@ -19,12 +19,14 @@ function saveUser(req, res) {
     const params = req.body;
     const user = new User();
 
+    // Verifica si los campos obligatorios están presentes
     if (params.name && params.email && params.nick && params.password) {
         user.name = params.name;
-        user.surname = params.surname;
+        user.surname = params.surname || null; // Si no se pasa apellido, se asigna null
         user.email = params.email.toLowerCase();
         user.nick = params.nick.toLowerCase();
         
+        // Busca si ya existe un usuario con el mismo email o nick
         User.find({ 
             $or: [
                 { email: user.email },
@@ -36,18 +38,21 @@ function saveUser(req, res) {
                     return res.status(200).send({ message: 'El usuario que intentas registrar ya existe!!' });
                 } else {
                     user.role = 'ROLE_USER';
-                    user.bio = null;
-                    user.location = null;
-                    user.isVerified = null;
-                    user.image = null;
-                    user.phoneNumber = null;
+                    // Aquí, asignamos los valores correctamente desde params
+                    user.bio = params.bio || null; 
+                    user.location = params.location || null; 
+                    user.isVerified = params.isVerified || null; // Asignar null o el valor real si es proporcionado
+                    user.image = params.image || null; 
+                    user.phoneNumber = params.phoneNumber || null;
                     user.createdAt = Date.now();
 
+                    // Cifra la contraseña
                     bcrypt.hash(params.password, null, null, (err, hash) => {
                         if (err) return res.status(500).send({ message: 'Error al cifrar la contraseña' });
 
                         user.password = hash;
 
+                        // Guarda el nuevo usuario en la base de datos
                         user.save()
                             .then((userStored) => {
                                 if (userStored) {
@@ -84,22 +89,24 @@ function loginUser(req, res) {
         email: email
     }).then(user => {
         if (user) {
-            bcrypt.compare(password, user.password, (check) => {
-                console.log(check);
+            // Compara la contraseña en texto claro con la cifrada en la base de datos
+            bcrypt.compare(password, user.password, (err, check) => {
+                if (err) return res.status(500).send({ message: 'Error al comparar contraseñas' });
+
                 if (check) {
-                    
-                    if(params.gettoken){
-                        //Generar y devolver el token
+                    // Si se pide el token
+                    if (params.gettoken) {
+                        // Generar y devolver el token
                         return res.status(200).send({
                             token: jwt.createToken(user)
                         });
                     } else {
-                        //Devolver datos de usuario
+                        // Devolver datos del usuario (sin la contraseña)
                         user.password = undefined;
                         res.status(200).send({ user });
                     }
                 } else {
-                    res.status(404).send({ message: 'El usuario no se ha podido loguear' });
+                    res.status(404).send({ message: 'Contraseña incorrecta' });
                 }
             });
         } else {
@@ -109,8 +116,9 @@ function loginUser(req, res) {
         console.error(err);
         res.status(500).send({ message: 'Error en la petición' });
     });
-
 }
+
+
 
 function getUser(req, res) {
     var userId = req.params.id;
