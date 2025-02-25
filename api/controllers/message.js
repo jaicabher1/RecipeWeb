@@ -35,7 +35,6 @@ async function sendMessage(req, res) {
 async function getReceivedMessages(req, res) {
     try {
         var userId = req.user.sub;
-        console.log(userId);
         var page = parseInt(req.params.page) || 1; // Asegurar que page sea un número
         var itemsPerPage = 4;
 
@@ -61,7 +60,6 @@ async function getReceivedMessages(req, res) {
 async function getEmittedMessages(req, res) {
     try {
         var userId = req.user.sub;
-        console.log(userId);
         var page = parseInt(req.params.page) || 1; // Asegurar que page sea un número
         var itemsPerPage = 4;
 
@@ -105,7 +103,6 @@ async function setViewedMessages(req, res) {
 
         return res.status(200).send({ messages });
     } catch (error) {
-        console.log(error);
         return res.status(500).send({ message: 'Error en la petición', error });
     }
 }

@@ -120,9 +120,7 @@ async function getFollowedPublications(req, res) {
     try {
         const userId = req.user.sub;
         const follows = await Follow.find({ user: userId }).populate('followed');
-        console.log(follows)
         const followedIds = follows.map(follow => follow.followed._id);
-        console.log(followedIds)
         const publications = await Publication.find({ user: { $in: followedIds } }).sort('-createdAt');
 
         return res.status(200).send({ publications });

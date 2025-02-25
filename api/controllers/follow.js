@@ -73,7 +73,6 @@ async function getMyFollows(req, res) {
             path: 'user', 
             select: 'name' 
         });
-        console.log(follows);
         if (!follows || follows.length === 0) {
             return res.status(404).send({ message: 'No sigues a ningún usuario' });
         }
@@ -89,7 +88,6 @@ async function getMyFollows(req, res) {
 async function getFollowBacks(req, res) {
     try {
         const userId = req.user.sub; 
-        console.log(userId);
         const follows = await Follow.find({ followed: userId })
         .populate({
             path: 'followed', 
@@ -99,7 +97,6 @@ async function getFollowBacks(req, res) {
             path: 'user', 
             select: 'name' 
         });
-        console.log(follows);
         if (!follows || follows.length === 0) {
             return res.status(404).send({ message: 'No sigues a ningún usuario' });
         }
