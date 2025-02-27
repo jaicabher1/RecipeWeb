@@ -90,9 +90,7 @@ function loginUser(req, res) {
     }).then(user => {
         if (user) {
             // Compara la contraseña en texto claro con la cifrada en la base de datos
-            bcrypt.compare(password, user.password, (err, check) => {
-                if (err) return res.status(500).send({ message: 'Error al comparar contraseñas' });
-
+            bcrypt.compare(password, user.password, check => {
                 if (check) {
                     // Si se pide el token
                     if (params.gettoken) {
