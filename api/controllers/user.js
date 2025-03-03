@@ -35,7 +35,7 @@ function saveUser(req, res) {
         }).exec()
             .then((users) => {
                 if (users && users.length >= 1) {
-                    return res.status(200).send({ message: 'El usuario que intentas registrar ya existe!!' });
+                    return res.status(400).send({ message: 'El usuario que intentas registrar ya existe!!' });
                 } else {
                     user.role = 'ROLE_USER';
                     // Aquí, asignamos los valores correctamente desde params
