@@ -18,4 +18,5 @@ api.post('/upload-image-user/:id', [md_auth.ensureAuth, md_upload], UserControll
 api.get('/get-image-user/:imageFile', UserController.getImageFile);
 api.get('/counters/:id?', md_auth.ensureAuth, UserController.getCounters);
 
+
 module.exports = api;
