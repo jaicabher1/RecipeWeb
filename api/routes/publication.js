@@ -16,5 +16,6 @@ api.get('/publication/:id', md_auth.ensureAuth, PublicationController.getPublica
 api.get('/followed-publications', md_auth.ensureAuth, PublicationController.getFollowedPublications);
 api.post('/upload-image-pub/:id', [md_auth.ensureAuth, md_upload], PublicationController.uploadImage);
 api.get('/get-image-pub/:imageFile', PublicationController.getImageFile);
+api.get('/getmypublications', md_auth.ensureAuth, PublicationController.getMyPublications);
 
 module.exports = api;

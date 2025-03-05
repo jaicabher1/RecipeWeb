@@ -91,7 +91,23 @@ async function deletePublication(req, res) {
     }
 }
 
-//PROBAR EN POSTMAN
+async function getMyPublications(req, res) {
+    try {
+        const userId = req.user.sub;
+        const publications = await Publication.find({ user: userId }).sort('-createdAt').exec();
+
+        if (!publications || publications.length === 0) {
+            return res.status(404).send({ message: 'No hay publicaciones' });
+        }
+
+        return res.status(200).send({ publications });
+    } catch (err) {
+        return res.status(500).send({ message: 'Error en el servidor', error: err.message });
+    }
+}
+
+
+
 async function getPublication(req, res) {
     try { 
         const publicationId = req.params.id;
@@ -189,5 +205,6 @@ module.exports = {
     getPublication,
     getFollowedPublications,
     getImageFile,
-    uploadImage
+    uploadImage,
+    getMyPublications
 };
