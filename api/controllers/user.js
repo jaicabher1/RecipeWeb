@@ -42,7 +42,7 @@ function saveUser(req, res) {
                     user.bio = params.bio || null; 
                     user.location = params.location || null; 
                     user.isVerified = params.isVerified || null; // Asignar null o el valor real si es proporcionado
-                    user.image = params.image || null; 
+                    user.image = params.image || "assets/users/chef.jpg"; 
                     user.phoneNumber = params.phoneNumber || null;
                     user.createdAt = Date.now();
 
@@ -231,6 +231,56 @@ function updateUser(req, res) {
             return res.status(500).send({ message: 'Error en la petición' });
         });
 }
+const fs = require('fs');
+
+function uploadImage(req,res) {
+    var userId = req.params.id;
+
+    if(req.files) {
+        var file_path = req.files.image.path;
+        var file_split = file_path.split('\\');
+        var file_name = file_split[2];
+        var ext_split = file_name.split('\.');
+        var file_ext = ext_split[1];
+        if(userId != req.user.sub){
+            return removeFilesOfUploads(res, file_path, 'No tienes permiso para actualizar los datos del usuario');
+        }
+
+        if(file_ext == 'png' || file_ext == 'jpg' || file_ext == 'jpeg' || file_ext == 'gif' || file_ext == 'svg') {
+            //Actualizar documento de usuario logueado
+            User.findByIdAndUpdate(userId, {image:file_name}, {new:true}).then(userUpdated => {
+                if(!userUpdated){
+                    res.status(404).send({message: 'No se ha podido actualizar el usuario'});
+                } else {
+                    res.status(200).send({user: userUpdated, image: file_name});
+                }
+            });
+    } else {
+        return removeFilesOfUploads(res, file_path, 'Extensión no válida');
+    }
+}
+
+}
+function removeFilesOfUploads(res, file_path, message){
+    fs.unlink(file_path, (err) => {
+        return res.status(200).send({message: message});
+    });
+}
+
+const path = require('path');
+
+function getImageFile(req, res) {
+    const image_file = req.params.imageFile;
+    const path_file = path.join(__dirname, '../uploads/users', image_file);
+
+    fs.promises.access(path_file, fs.constants.F_OK)
+        .then(() => {
+            res.sendFile(path.resolve(path_file));
+        })
+        .catch(() => {
+            res.status(404).send({ message: 'No existe la imagen...' });
+        });
+}
 
 function getCounters(req, res){
     let userId = req.user.sub;
@@ -253,7 +303,6 @@ async function getCountFollow(userId) {
     };
     
 }
-
 //Exportar las funciones para que esten disponibles en otros archivos
 module.exports = {
     home,
