@@ -42,7 +42,7 @@ function saveUser(req, res) {
                     user.bio = params.bio || null; 
                     user.location = params.location || null; 
                     user.isVerified = params.isVerified || null; // Asignar null o el valor real si es proporcionado
-                    user.image = params.image || "assets/users/chef.jpg"; 
+                    user.image = params.image || 'assets/users/chef.jpg'; 
                     user.phoneNumber = params.phoneNumber || null;
                     user.createdAt = Date.now();
 
