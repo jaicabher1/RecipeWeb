@@ -182,36 +182,23 @@ async function followUserIds(user_id) {
     
 }
 
-// Devolver usuarios paginados
+//Devolver un listado de usuarios sin paginar
 function getUsers(req, res) {
     const identity_user_id = req.user.sub;
-    let page = parseInt(req.params.page, 10) || 1; // Página por defecto
-    const itemsPerPage = 5; // Número de usuarios por página
-
-    User.paginate({}, { page: page, limit: itemsPerPage, sort: { _id: 1 } })
-        .then(result => {
-            if (!result || result.docs.length === 0) {
+    try {
+        const users = User.find().sort('_id');
+        users.then((users) => {
+            if (!users) {
                 return res.status(404).send({ message: 'No hay usuarios disponibles' });
             }
-
-            // Total de usuarios y páginas
-            const totalUsers = result.totalDocs;
-            const totalPages = Math.ceil(totalUsers / itemsPerPage); 
             followUserIds(identity_user_id).then((value) => {
-                return res.status(200).send({
-                    users: result.docs,
-                    users_following: value.following,
-                    users_follow_me: value.followed,
-                    total: totalUsers,
-                    pages: totalPages,
-                });
+                return res.status(200).send({ users, following: value.following, followed: value.followed });
             });
-
-        })
-        .catch(err => {
-            console.error(err);
-            return res.status(500).send({ message: 'Error en la petición' });
-        });
+        });      
+    } catch (error) {
+        console.error(error);
+        return res.status(500).send({ message: 'Error en la petición' });        
+    }    
 }
 
 function updateUser(req, res) {
