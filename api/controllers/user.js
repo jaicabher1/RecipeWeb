@@ -25,6 +25,7 @@ function saveUser(req, res) {
         user.surname = params.surname || null; // Si no se pasa apellido, se asigna null
         user.email = params.email.toLowerCase();
         user.nick = params.nick.toLowerCase();
+         
         
         // Busca si ya existe un usuario con el mismo email o nick
         User.find({ 
@@ -126,7 +127,12 @@ function getUser(req, res) {
             if (user) {
                 followThisUser(req.user.sub, userId)
                     .then((value) => {
-                        res.status(200).send({ user, following: value.following, followed: value.followed });
+                        user.password = undefined;
+                        // Obtener el número de publicaciones, following y followed 
+                        getCountFollow(userId).then((value) => {
+                            res.status(200).send({ user, following: value.following, followed: value.followed, publications: value.publications });
+                        });
+                        
                     })
             } else {
                 res.status(404).send({ message: 'El usuario no existe' });
