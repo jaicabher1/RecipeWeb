@@ -24,7 +24,7 @@ async function saveFollow(req, res) {
             followed: follow.followed,
         });
         if (existingFollow) {
-            return res.status(200).send({ message: 'Ya sigues a este usuario' });
+            return res.status(409).send({ message: 'Ya sigues a este usuario' });
         }
 
         const followStored = await follow.save();
@@ -42,7 +42,7 @@ async function saveFollow(req, res) {
 async function deleteFollow(req, res) {
     try {
         const userId = req.user.sub;
-        const followedId = req.params.id;
+        const followedId = req.body.id;
 
         const follow = await Follow.findOneAndDelete({
             user: userId,
