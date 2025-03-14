@@ -82,43 +82,37 @@ function saveUser(req, res) {
 
 function loginUser(req, res) {
     var params = req.body;
-
+  
     var email = params.email;
     var password = params.password;
-
-    User.findOne({
-        email: email
-    }).then(user => {
-        if (user) {
-            // Compara la contraseña en texto claro con la cifrada en la base de datos
-            bcrypt.compare(password, user.password, check => {
-                if (check) {
-                    // Si se pide el token
-                    if (params.gettoken) {
-                        // Generar y devolver el token
-                        return res.status(200).send({
-                            token: jwt.createToken(user)
-                        });
-                    } else {
-                        // Devolver datos del usuario (sin la contraseña)
-                        user.password = undefined;
-                        res.status(200).send({ user });
-                    }
-                } else {
-                    res.status(404).send({ message: 'Contraseña incorrecta' });
-                }
-            });
-        } else {
-            res.status(404).send({ message: 'No existe el usuario!!!' });
-        }
+  
+    User.findOne({ email: email }).then(user => {
+      if (user) {
+        bcrypt.compare(password, user.password, (err, check) => {
+          if (err) return res.status(500).send({ message: 'Error al comparar contraseña' });
+  
+          if (check) {
+            if (params.gettoken) {
+              return res.status(200).send({
+                token: jwt.createToken(user)
+              });
+            } else {
+              user.password = undefined;
+              return res.status(200).send({ user });
+            }
+          } else {
+            return res.status(401).send({ message: 'Contraseña incorrecta' });
+          }
+        });
+      } else {
+        return res.status(404).send({ message: 'No existe el usuario' });
+      }
     }).catch(err => {
-        console.error(err);
-        res.status(500).send({ message: 'Error en la petición' });
+      console.error(err);
+      return res.status(500).send({ message: 'Error en la petición' });
     });
-}
-
-
-
+  }
+  
 function getUser(req, res) {
     var userId = req.params.id;
 
