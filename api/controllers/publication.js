@@ -95,7 +95,11 @@ async function deletePublication(req, res) {
 
 async function getMyPublications(req, res) {
     try {
-        const userId = req.user.sub;
+        let userId = req.user.sub;
+        console.log(userId);
+        console.log(req.params.userId !== null);
+        if(req.params.userId != null) userId = req.params.userId;
+    
         const publications = await Publication.find({ user: userId }).sort('-createdAt').exec();
 
         if (!publications || publications.length === 0) {
@@ -104,6 +108,7 @@ async function getMyPublications(req, res) {
 
         return res.status(200).send({ publications });
     } catch (err) {
+        console.error(err);
         return res.status(500).send({ message: 'Error en el servidor', error: err.message });
     }
 }
