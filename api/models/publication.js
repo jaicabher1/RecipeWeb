@@ -29,7 +29,6 @@ var PublicationSchema = Schema({
     },
     prepTime: { type: Number, required: true },
     image: String , 
-    file: String , 
     created_at: { type: Date, default: Date.now  }
 });
 
