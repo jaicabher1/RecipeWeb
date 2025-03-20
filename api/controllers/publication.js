@@ -31,7 +31,7 @@ async function savePublication(req, res) {
             publication.prepTime = params.prepTime;
             publication.image = params.image;
             publication.file = params.file;
-            publication.created_at = moment().unix();
+            publication.created_at = Date.now();
 
             const publicationStored = await publication.save();
             if (!publicationStored) {
