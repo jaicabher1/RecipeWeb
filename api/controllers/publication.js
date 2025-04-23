@@ -167,7 +167,7 @@ function uploadImage(req, res) {
         if (file_ext == 'png' || file_ext == 'jpg' || file_ext == 'jpeg' || file_ext == 'gif' || file_ext == 'svg') {
             //Actualizar documento de usuario logueado
             Publication.findOne({ user: req.user.sub, _id: publicationId }).then(publication => {
-                if (publication.length > 0) {
+                if (publication) {
                     Publication.findByIdAndUpdate(publicationId, { image: file_name }, { new: true }).then(publicationUpdated => {
                         if (!publicationUpdated) {
                             res.status(404).send({ message: 'No se ha podido actualizar el usuario' });
