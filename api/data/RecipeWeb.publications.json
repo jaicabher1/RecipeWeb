@@ -1,0 +1,1128 @@
+[{
+  "_id": {
+    "$oid": "679e6ea7da2a548f69091ea6"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e92"
+  },
+  "title": "Almuerzo Vegano",
+  "category": "Vegano",
+  "description": "Un almuerzo delicioso para quienes siguen una dieta vegana.",
+  "ingredients": [
+    "Tofu",
+    "Arroz integral",
+    "Verduras"
+  ],
+  "steps": "Cocinar el tofu con las verduras y servir con arroz integral.",
+  "views": 150,
+  "tags": [
+    "Saludable",
+    "Económico",
+    "Vegetariano"
+  ],
+  "difficulty": "Intermedio",
+  "prepTime": 25,
+  "image": "3SPS7rqi2XeJgKuovim6ItK4.jpg",
+  "created_at": {
+    "$date": "2025-02-01T18:57:43.047Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "679e6ea7da2a548f69091ea9"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "title": "Snack Saludable",
+  "category": "Snack",
+  "description": "Un snack saludable para media tarde o para el mediodia o en el desayuno en la empresa.",
+  "ingredients": [
+    "Frutos secos",
+    "Yogurt",
+    "Fruta"
+  ],
+  "steps": "Mezclar los frutos secos con el yogurt y añadir la fruta picada.",
+  "views": 120,
+  "tags": [
+    "Saludable",
+    "Rápido"
+  ],
+  "difficulty": "Avanzado",
+  "prepTime": 15,
+  "image": "Sxjl5qH80JfNWmccU4t2UQvV.jpg",
+  "created_at": {
+    "$date": "2025-02-01T18:57:43.048Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "679e6ea7da2a548f69091ea5"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "title": "Desayuno Saludable",
+  "category": "Desayuno",
+  "description": "Una receta fácil y rápida para un desayuno saludable.",
+  "ingredients": [
+    "Avena",
+    "Frutas",
+    "Yogurt"
+  ],
+  "steps": "Mezclar la avena con el yogurt, agregar frutas por encima y servir.",
+  "views": 100,
+  "tags": [
+    "Rápido",
+    "Saludable"
+  ],
+  "difficulty": "Fácil",
+  "prepTime": 10,
+  "image": "ILA6CUiuD8U44rgWY_ptxAdL.jpg",
+  "created_at": {
+    "$date": "2025-01-01T18:57:43.046Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "679e6ea7da2a548f69091ea8"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e94"
+  },
+  "title": "Postre de Chocolate",
+  "category": "Postre",
+  "description": "Un postre de chocolate fácil de hacer y delicioso.",
+  "ingredients": [
+    "Chocolate",
+    "Harina",
+    "Azúcar",
+    "Mantequilla"
+  ],
+  "steps": "Derretir el chocolate y mezclar con los ingredientes. Hornear y enfriar.",
+  "views": 200,
+  "tags": [
+    "Dulce",
+    "Fácil"
+  ],
+  "difficulty": "Fácil",
+  "prepTime": 30,
+  "image": "GlkNCdO7Wo9_--kjCyVPUBCs.jpg",
+  "created_at": {
+    "$date": "2025-02-01T18:57:43.047Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "679e6ea7da2a548f69091ea7"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e93"
+  },
+  "title": "Cena Ligera",
+  "category": "Cena",
+  "description": "Una cena ligera perfecta para terminar el día sin pesadez.",
+  "ingredients": [
+    "Ensalada",
+    "Pechuga de pollo",
+    "Aguacate"
+  ],
+  "steps": "Cocinar la pechuga de pollo y servir con ensalada y aguacate.",
+  "views": 80,
+  "tags": [
+    "Fácil",
+    "Económico"
+  ],
+  "difficulty": "Fácil",
+  "prepTime": 20,
+  "image": "nCE53r5733rTBYGoM1JCZtyH.jpg",
+  "created_at": {
+    "$date": "2025-02-01T18:57:43.047Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "679e6ea7da2a548f69091eaa"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e96"
+  },
+  "title": "Tacos Veganos",
+  "category": "Vegano",
+  "description": "Tacos deliciosos y veganos para disfrutar cualquier día.",
+  "ingredients": [
+    "Tortillas",
+    "Tofu",
+    "Verduras",
+    "Salsa"
+  ],
+  "steps": "Cocinar el tofu, rellenar las tortillas con tofu y verduras, añadir salsa.",
+  "views": 140,
+  "tags": [
+    "Vegetariano",
+    "Saludable"
+  ],
+  "difficulty": "Intermedio",
+  "prepTime": 20,
+  "image": "d09hKI5pfRvBOISfivwW2-sp.jpg",
+  "created_at": {
+    "$date": "2025-02-01T18:57:43.048Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "679e6ea7da2a548f69091ead"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e99"
+  },
+  "title": "Ensalada de Atún",
+  "category": "Almuerzo",
+  "description": "Una ensalada fresca y rápida con atún.",
+  "ingredients": [
+    "Atún",
+    "Lechuga",
+    "Tomate",
+    "Aceitunas"
+  ],
+  "steps": "Mezclar todos los ingredientes y servir.",
+  "views": 110,
+  "tags": [
+    "Rápido",
+    "Saludable"
+  ],
+  "difficulty": "Fácil",
+  "prepTime": 10,
+  "image": "M85ysiYpmzheXTXrzdojEVni.jpg",
+  "created_at": {
+    "$date": "2025-02-01T18:57:43.049Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "679e6ea7da2a548f69091eae"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e9a"
+  },
+  "title": "Smoothie de Fresas",
+  "category": "Postre",
+  "description": "Un smoothie delicioso y saludable.",
+  "ingredients": [
+    "Fresas",
+    "Yogurt",
+    "Leche"
+  ],
+  "steps": "Mezclar las fresas con yogurt y leche, y servir.",
+  "views": 130,
+  "tags": [
+    "Saludable",
+    "Fácil"
+  ],
+  "difficulty": "Fácil",
+  "prepTime": 5,
+  "image": "2DoG6BKNqY_9zDn3RqwOA1Wb.jpg",
+  "created_at": {
+    "$date": "2025-02-01T18:57:43.049Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "679e6ea7da2a548f69091eaf"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "title": "Galletas Caseras",
+  "category": "Postre",
+  "description": "Galletas caseras, perfectas para acompañar con café.",
+  "ingredients": [
+    "Harina",
+    "Azúcar",
+    "Mantequilla",
+    "Chocolate"
+  ],
+  "steps": "Mezclar los ingredientes, formar las galletas y hornear.",
+  "views": 180,
+  "tags": [
+    "Dulce",
+    "Fácil"
+  ],
+  "difficulty": "Fácil",
+  "prepTime": 35,
+  "image": "vKkHpA4jwFJlyQ3Y72PZyCFR.jpg",
+  "created_at": {
+    "$date": "2025-02-01T18:57:43.049Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "679e6ea7da2a548f69091eb0"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e92"
+  },
+  "title": "Hamburguesa Vegetariana",
+  "category": "Cena",
+  "description": "Una hamburguesa deliciosa sin carne.",
+  "ingredients": [
+    "Pan de hamburguesa",
+    "Tofu",
+    "Lechuga",
+    "Tomate"
+  ],
+  "steps": "Cocinar el tofu y montar la hamburguesa con los ingredientes.",
+  "views": 160,
+  "tags": [
+    "Vegetariano",
+    "Económico"
+  ],
+  "difficulty": "Intermedio",
+  "prepTime": 20,
+  "image": "RE-mSNFHudkkCy_rsrtbl09Q.jpg",
+  "created_at": {
+    "$date": "2025-02-01T18:57:43.049Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "679e6ea7da2a548f69091eb1"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e93"
+  },
+  "title": "Arroz Integral con Verduras",
+  "category": "Almuerzo",
+  "description": "Un plato de arroz integral con una mezcla de verduras frescas.",
+  "ingredients": [
+    "Arroz integral",
+    "Brócoli",
+    "Zanahorias",
+    "Pimientos"
+  ],
+  "steps": "Cocer el arroz y las verduras, mezclar y servir.",
+  "views": 140,
+  "tags": [
+    "Saludable",
+    "Económico"
+  ],
+  "difficulty": "Fácil",
+  "prepTime": 30,
+  "image": "WupGn6wnyot2Z8rtBBepS9LF.jpg",
+  "created_at": {
+    "$date": "2025-02-01T18:57:43.049Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "679e6ea7da2a548f69091eb2"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e94"
+  },
+  "title": "Tarta de Manzana",
+  "category": "Postre",
+  "description": "Una tarta clásica de manzana que encanta a todos.",
+  "ingredients": [
+    "Manzanas",
+    "Harina",
+    "Azúcar",
+    "Mantequilla"
+  ],
+  "steps": "Preparar la masa, añadir las manzanas y hornear.",
+  "views": 220,
+  "tags": [
+    "Dulce",
+    "Fácil"
+  ],
+  "difficulty": "Intermedio",
+  "prepTime": 45,
+  "image": "7iaPbZgSunBb5FQccpiuygov.jpg",
+  "created_at": {
+    "$date": "2025-02-01T18:57:43.049Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "679e6ea7da2a548f69091eb3"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "title": "Ensalada de Quinoa",
+  "category": "Vegano",
+  "description": "Una ensalada fresca y rica en proteínas vegetales.",
+  "ingredients": [
+    "Quinoa",
+    "Pepino",
+    "Tomate",
+    "Aguacate"
+  ],
+  "steps": "Cocer la quinoa y mezclar con los demás ingredientes.",
+  "views": 160,
+  "tags": [
+    "Saludable",
+    "Vegetariano"
+  ],
+  "difficulty": "Fácil",
+  "prepTime": 25,
+  "image": "JF0PTBi3G3VwySsUZveBys1J.jpg",
+  "created_at": {
+    "$date": "2025-02-01T18:57:43.049Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "679e6ea7da2a548f69091eb4"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e96"
+  },
+  "title": "Pasta al Pesto",
+  "category": "Cena",
+  "description": "Una pasta al pesto sencilla y deliciosa.",
+  "ingredients": [
+    "Pasta",
+    "Albahaca",
+    "Ajo",
+    "Aceite de oliva"
+  ],
+  "steps": "Cocer la pasta, mezclar con pesto y servir.",
+  "views": 170,
+  "tags": [
+    "Fácil",
+    "Rápido"
+  ],
+  "difficulty": "Fácil",
+  "prepTime": 15,
+  "image": "8hmIP1l8w36DORRai5LzNWar.jpg",
+  "created_at": {
+    "$date": "2025-02-01T18:57:43.049Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "679e6ea7da2a548f69091eb5"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e97"
+  },
+  "title": "Fajitas de Pollo",
+  "category": "Cena",
+  "description": "Fajitas de pollo fáciles de preparar para la cena.",
+  "ingredients": [
+    "Pollo",
+    "Pimientos",
+    "Cebolla",
+    "Tortillas"
+  ],
+  "steps": "Cocinar el pollo con los pimientos y cebolla, montar las fajitas.",
+  "views": 210,
+  "tags": [
+    "Fácil",
+    "Económico"
+  ],
+  "difficulty": "Fácil",
+  "prepTime": 30,
+  "image": "aniT4u5rd4AeeHOxYjTcuyyu.jpg",
+  "created_at": {
+    "$date": "2025-02-01T18:57:43.050Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "679e6ea7da2a548f69091eb6"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e98"
+  },
+  "title": "Muffins de Arándano",
+  "category": "Postre",
+  "description": "Muffins de arándano perfectos para el desayuno.",
+  "ingredients": [
+    "Harina",
+    "Arándonos",
+    "Azúcar",
+    "Leche"
+  ],
+  "steps": "Mezclar los ingredientes, formar los muffins y hornear.",
+  "views": 150,
+  "tags": [
+    "Dulce",
+    "Fácil"
+  ],
+  "difficulty": "Fácil",
+  "prepTime": 25,
+  "image": "receta16.jpg",
+  "created_at": {
+    "$date": "2025-02-01T18:57:43.050Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "679e6ea7da2a548f69091eb7"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e99"
+  },
+  "title": "Sushi Casero",
+  "category": "Cena",
+  "description": "Sushi casero para los amantes de la comida japonesa.",
+  "ingredients": [
+    "Arroz para sushi",
+    "Pescado fresco",
+    "Algas nori",
+    "Aguacate"
+  ],
+  "steps": "Preparar el arroz, montar el sushi y cortar en piezas.",
+  "views": 240,
+  "tags": [
+    "Internacional",
+    "Fácil"
+  ],
+  "difficulty": "Intermedio",
+  "prepTime": 40,
+  "image": "UsPrLdBpjdQnjKZSZ7EE05y8.jpg",
+  "created_at": {
+    "$date": "2025-02-01T18:57:43.050Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "679e6ea7da2a548f69091eb8"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e9a"
+  },
+  "title": "Tarta de Limón",
+  "category": "Postre",
+  "description": "Tarta de limón con un toque fresco y ácido.",
+  "ingredients": [
+    "Limón",
+    "Harina",
+    "Azúcar",
+    "Huevos"
+  ],
+  "steps": "Preparar la masa, añadir el relleno de limón y hornear.",
+  "views": 180,
+  "tags": [
+    "Dulce",
+    "Fácil"
+  ],
+  "difficulty": "Intermedio",
+  "prepTime": 35,
+  "image": "9ypyk1DMYgEezQoYe6CZ1ZEw.jpg",
+  "created_at": {
+    "$date": "2025-02-01T18:57:43.050Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "679e6ea7da2a548f69091eab"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e97"
+  },
+  "title": "Pizza Casera",
+  "category": "Cena",
+  "description": "Haz tu propia pizza con ingredientes frescos y sabrosos.",
+  "ingredients": [
+    "Masa de pizza",
+    "Tomate",
+    "Queso",
+    "Pepperoni"
+  ],
+  "steps": "Preparar la masa, añadir tomate, queso y pepperoni, y hornear.",
+  "views": 250,
+  "tags": [
+    "Fácil",
+    "Económico"
+  ],
+  "difficulty": "Fácil",
+  "prepTime": 30,
+  "image": "0wXToameSAplL6BBaXRHu94L.jpg",
+  "created_at": {
+    "$date": "2025-02-01T18:57:43.048Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "679e6ea7da2a548f69091eac"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e98"
+  },
+  "title": "Sopa de Lentejas",
+  "category": "Almuerzo",
+  "description": "Una sopa reconfortante de lentejas.",
+  "ingredients": [
+    "Lentejas",
+    "Zanahorias",
+    "Cebolla",
+    "Ajo"
+  ],
+  "steps": "Cocer las lentejas con las verduras y añadir especias al gusto.",
+  "views": 90,
+  "tags": [
+    "Económico",
+    "Fácil"
+  ],
+  "difficulty": "Fácil",
+  "prepTime": 40,
+  "image": "receta20.jpg",
+  "created_at": {
+    "$date": "2025-02-01T18:57:43.048Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "679e717e99ac0b8ed787ad94"
+  },
+  "ingredients": [
+    "patata, aceite, huevos"
+  ],
+  "views": 0,
+  "tags": [
+    "Tradicional",
+    "Rápido"
+  ],
+  "created_at": {
+    "$date": "1970-01-21T02:53:56.990Z"
+  },
+  "user": {
+    "$oid": "67780e5fda31743a1a9ee481"
+  },
+  "title": "Tortilla de patata",
+  "category": "Almuerzo",
+  "description": "La comida más tipica de España",
+  "steps": "Echar en aceite las papatas hasta que se doren, mezclar con huevo y echar la mezcla en una sarten.",
+  "difficulty": "Intermedio",
+  "prepTime": 2,
+  "image": "SW3eBLGgirLxaMobPPp6InvU.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc49e3c32d2450648064a5"
+  },
+  "ingredients": [
+    "almendras"
+  ],
+  "views": 0,
+  "tags": [
+    "Rápido"
+  ],
+  "created_at": {
+    "$date": "1970-01-21T04:01:30.083Z"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "title": "Snack Saludable Borrar Prueba",
+  "category": "Snack",
+  "description": "dadsfasdfasda",
+  "steps": "steps 1DFSASDSADS",
+  "difficulty": "Intermedio",
+  "prepTime": 5,
+  "__v": 0,
+  "image": "x1XknKWLfI-6G-_LFrkBcJor.jpg"
+},
+{
+  "_id": {
+    "$oid": "67dc4a1b2aef2f689bda566c"
+  },
+  "ingredients": [
+    "almendras"
+  ],
+  "views": 0,
+  "tags": [
+    "Rápido"
+  ],
+  "created_at": {
+    "$date": "2025-03-20T17:02:19.402Z"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "title": "Snack Saludable Borrar Prueba 2",
+  "category": "Snack",
+  "description": "dadsfasdfasda",
+  "steps": "steps 1DFSASDSADS",
+  "difficulty": "Intermedio",
+  "prepTime": 5,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc4a392aef2f689bda56a9"
+  },
+  "ingredients": [
+    "asd"
+  ],
+  "views": 0,
+  "tags": [
+    "Rápido"
+  ],
+  "created_at": {
+    "$date": "2024-03-20T17:02:49.589Z"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "title": "ada",
+  "category": "Cena",
+  "description": "asdf",
+  "steps": "ad",
+  "difficulty": "Fácil",
+  "prepTime": 2,
+  "image": "PWND6l-Q5wry5IDLtJSSpohZ.jpg",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc4e0f2aef2f689bda5900"
+  },
+  "ingredients": [
+    "almendras"
+  ],
+  "views": 0,
+  "tags": [
+    "Rápido"
+  ],
+  "created_at": {
+    "$date": "2025-01-20T17:19:11.058Z"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "title": "Snack Saludable Borrar Prueba 3",
+  "category": "Snack",
+  "description": "dadsfasdfasda",
+  "steps": "steps 1DFSASDSADS",
+  "difficulty": "Intermedio",
+  "prepTime": 5,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc4e122aef2f689bda5902"
+  },
+  "ingredients": [
+    "almendras"
+  ],
+  "views": 0,
+  "tags": [
+    "Rápido"
+  ],
+  "created_at": {
+    "$date": "2025-03-20T17:19:14.047Z"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "title": "Snack Saludable Borrar Prueba 4",
+  "category": "Snack",
+  "description": "dadsfasdfasda",
+  "steps": "steps 1DFSASDSADS",
+  "difficulty": "Intermedio",
+  "prepTime": 5,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc4e152aef2f689bda5904"
+  },
+  "ingredients": [
+    "almendras"
+  ],
+  "views": 0,
+  "tags": [
+    "Rápido"
+  ],
+  "created_at": {
+    "$date": "2025-03-20T17:19:17.958Z"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "title": "Snack Saludable Borrar Prueba 5",
+  "category": "Snack",
+  "description": "dadsfasdfasda",
+  "steps": "steps 1DFSASDSADS",
+  "difficulty": "Intermedio",
+  "prepTime": 5,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc4e1f2aef2f689bda5906"
+  },
+  "ingredients": [
+    "almendras"
+  ],
+  "views": 0,
+  "tags": [
+    "Rápido"
+  ],
+  "created_at": {
+    "$date": "2025-03-20T17:19:27.743Z"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "title": "Snack Saludable Borrar Prueba 1",
+  "category": "Snack",
+  "description": "dadsfasdfasda",
+  "steps": "steps 1DFSASDSADS",
+  "difficulty": "Intermedio",
+  "prepTime": 5,
+  "__v": 0,
+  "image": "1r6Meo_hhEQqMtmQKRbfa5U4.jpg"
+},
+{
+  "_id": {
+    "$oid": "67dc4e222aef2f689bda5908"
+  },
+  "ingredients": [
+    "almendras"
+  ],
+  "views": 0,
+  "tags": [
+    "Rápido"
+  ],
+  "created_at": {
+    "$date": "2025-03-20T17:19:30.666Z"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "title": "Snack Saludable Borrar Prueba 2",
+  "category": "Snack",
+  "description": "dadsfasdfasda",
+  "steps": "steps 1DFSASDSADS",
+  "difficulty": "Intermedio",
+  "prepTime": 5,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc4e252aef2f689bda590a"
+  },
+  "ingredients": [
+    "almendras"
+  ],
+  "views": 0,
+  "tags": [
+    "Rápido"
+  ],
+  "created_at": {
+    "$date": "2025-03-20T17:19:33.580Z"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "title": "Snack Saludable Borrar Prueba 3",
+  "category": "Snack",
+  "description": "dadsfasdfasda",
+  "steps": "steps 1DFSASDSADS",
+  "difficulty": "Intermedio",
+  "prepTime": 5,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc4e282aef2f689bda590c"
+  },
+  "ingredients": [
+    "almendras"
+  ],
+  "views": 0,
+  "tags": [
+    "Rápido"
+  ],
+  "created_at": {
+    "$date": "2025-03-20T17:19:36.901Z"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "title": "Snack Saludable Borrar Prueba 4",
+  "category": "Snack",
+  "description": "dadsfasdfasda",
+  "steps": "steps 1DFSASDSADS",
+  "difficulty": "Intermedio",
+  "prepTime": 5,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc4e2b2aef2f689bda590e"
+  },
+  "ingredients": [
+    "almendras"
+  ],
+  "views": 0,
+  "tags": [
+    "Rápido"
+  ],
+  "created_at": {
+    "$date": "2025-03-20T17:19:39.344Z"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "title": "Snack Saludable Borrar Prueba 5",
+  "category": "Snack",
+  "description": "dadsfasdfasda",
+  "steps": "steps 1DFSASDSADS",
+  "difficulty": "Intermedio",
+  "prepTime": 5,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc4e2d2aef2f689bda5910"
+  },
+  "ingredients": [
+    "almendras"
+  ],
+  "views": 0,
+  "tags": [
+    "Rápido"
+  ],
+  "created_at": {
+    "$date": "2025-03-20T17:19:41.834Z"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "title": "Snack Saludable Borrar Prueba 6",
+  "category": "Snack",
+  "description": "dadsfasdfasda",
+  "steps": "steps 1DFSASDSADS",
+  "difficulty": "Intermedio",
+  "prepTime": 5,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc4e302aef2f689bda5912"
+  },
+  "ingredients": [
+    "almendras"
+  ],
+  "views": 0,
+  "tags": [
+    "Rápido"
+  ],
+  "created_at": {
+    "$date": "2025-01-20T17:19:44.297Z"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "title": "Snack Saludable Borrar Prueba 7",
+  "category": "Snack",
+  "description": "dadsfasdfasda",
+  "steps": "steps 1DFSASDSADS",
+  "difficulty": "Intermedio",
+  "prepTime": 5,
+  "__v": 0,
+  "image": "5oTdzr97xdKBNcxz5dJerWuE.jpg"
+},
+{
+  "_id": {
+    "$oid": "67dc4e322aef2f689bda5914"
+  },
+  "ingredients": [
+    "almendras"
+  ],
+  "views": 0,
+  "tags": [
+    "Rápido"
+  ],
+  "created_at": {
+    "$date": "2024-12-20T17:19:46.946Z"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "title": "Snack Saludable Borrar Prueba 8",
+  "category": "Snack",
+  "description": "dadsfasdfasda",
+  "steps": "steps 1DFSASDSADS",
+  "difficulty": "Intermedio",
+  "prepTime": 5,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc4e362aef2f689bda5916"
+  },
+  "ingredients": [
+    "almendras"
+  ],
+  "views": 0,
+  "tags": [
+    "Rápido"
+  ],
+  "created_at": {
+    "$date": "2024-03-20T17:19:50.298Z"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "title": "Snack Saludable Borrar Prueba 9",
+  "category": "Snack",
+  "description": "dadsfasdfasda",
+  "steps": "steps 1DFSASDSADS",
+  "difficulty": "Intermedio",
+  "prepTime": 5,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc4e392aef2f689bda5918"
+  },
+  "ingredients": [
+    "almendras"
+  ],
+  "views": 0,
+  "tags": [
+    "Rápido"
+  ],
+  "created_at": {
+    "$date": "2024-03-20T17:19:53.962Z"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "title": "Snack Saludable Borrar Prueba 10",
+  "category": "Snack",
+  "description": "dadsfasdfasda",
+  "steps": "steps 1DFSASDSADS",
+  "difficulty": "Intermedio",
+  "prepTime": 5,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc4e3d2aef2f689bda591a"
+  },
+  "ingredients": [
+    "almendras"
+  ],
+  "views": 0,
+  "tags": [
+    "Rápido"
+  ],
+  "created_at": {
+    "$date": "2023-03-20T17:19:57.643Z"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "title": "Snack Saludable Borrar Prueba 11",
+  "category": "Snack",
+  "description": "dadsfasdfasda",
+  "steps": "steps 1DFSASDSADS",
+  "difficulty": "Intermedio",
+  "prepTime": 5,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc4e402aef2f689bda591c"
+  },
+  "ingredients": [
+    "almendras"
+  ],
+  "views": 0,
+  "tags": [
+    "Rápido"
+  ],
+  "created_at": {
+    "$date": "2025-01-20T17:20:00.310Z"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "title": "Snack Saludable Borrar Prueba 12",
+  "category": "Snack",
+  "description": "dadsfasdfasda",
+  "steps": "steps 1DFSASDSADS",
+  "difficulty": "Intermedio",
+  "prepTime": 5,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dc4e432aef2f689bda591e"
+  },
+  "ingredients": [
+    "almendras"
+  ],
+  "views": 0,
+  "tags": [
+    "Rápido"
+  ],
+  "created_at": {
+    "$date": "2024-03-20T17:20:03.378Z"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "title": "Snack Saludable Borrar Prueba 13",
+  "category": "Snack",
+  "description": "dadsfasdfasda",
+  "steps": "steps 1DFSASDSADS",
+  "difficulty": "Intermedio",
+  "prepTime": 5,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681346480b42ffc1939383a9"
+  },
+  "ingredients": [
+    "huevo, 3 patatas y aceite"
+  ],
+  "views": 0,
+  "tags": [
+    "Rápido"
+  ],
+  "created_at": {
+    "$date": "2025-05-01T10:00:40.039Z"
+  },
+  "user": {
+    "$oid": "681345ed0b42ffc193938333"
+  },
+  "title": "Tortilla de patas",
+  "category": "Cena",
+  "description": "ads",
+  "steps": "asd",
+  "difficulty": "Intermedio",
+  "prepTime": 45,
+  "image": "SW3eBLGgirLxaMobPPp6InvU.jpg",
+  "__v": 0
+}]

@@ -1,0 +1,150 @@
+[{
+  "_id": {
+    "$oid": "67d5606cd6af321d416935bb"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "publication": {
+    "$oid": "679e6ea7da2a548f69091ea6"
+  },
+  "createdAt": {
+    "$date": "2025-03-15T11:11:40.398Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d6c0cba8d542607f3d28a8"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e96"
+  },
+  "publication": {
+    "$oid": "679e6ea7da2a548f69091ea6"
+  },
+  "createdAt": {
+    "$date": "2025-03-16T12:15:07.420Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d6c102a8d542607f3d293e"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e96"
+  },
+  "publication": {
+    "$oid": "679e6ea7da2a548f69091eb0"
+  },
+  "createdAt": {
+    "$date": "2025-03-16T12:16:02.668Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d6c16ca8d542607f3d2c48"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "publication": {
+    "$oid": "679e6ea7da2a548f69091eb7"
+  },
+  "createdAt": {
+    "$date": "2025-03-16T12:17:48.642Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f53d9a08302858b970f4db"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "publication": {
+    "$oid": "679e6ea7da2a548f69091eb3"
+  },
+  "createdAt": {
+    "$date": "2025-04-08T15:15:38.965Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f65c5bd35b44959f5a4c53"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "publication": {
+    "$oid": "679e6ea7da2a548f69091eaa"
+  },
+  "createdAt": {
+    "$date": "2025-04-09T11:39:07.901Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f65c5dd35b44959f5a4c59"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "publication": {
+    "$oid": "679e6ea7da2a548f69091ead"
+  },
+  "createdAt": {
+    "$date": "2025-04-09T11:39:09.782Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f65c61d35b44959f5a4c5f"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "publication": {
+    "$oid": "679e6ea7da2a548f69091eb0"
+  },
+  "createdAt": {
+    "$date": "2025-04-09T11:39:13.110Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6807ca4a50fc2afeeb4be1c3"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "publication": {
+    "$oid": "679e6ea7da2a548f69091ea6"
+  },
+  "createdAt": {
+    "$date": "2025-04-22T16:56:42.984Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68091afca3d79fc46cbc8fdd"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "publication": {
+    "$oid": "679e6ea7da2a548f69091ea9"
+  },
+  "createdAt": {
+    "$date": "2025-04-23T16:53:16.150Z"
+  },
+  "__v": 0
+}]

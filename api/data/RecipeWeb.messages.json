@@ -1,0 +1,799 @@
+[{
+  "_id": {
+    "$oid": "67d466b5c8ce08e2b45ec13d"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T03:52:53.173Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "text": "Hola Pedro!!",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d466c9c8ce08e2b45ec142"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T03:52:53.193Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e93"
+  },
+  "text": "Hola Carlos!",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d46704c8ce08e2b45ec15c"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T03:52:53.252Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "text": "que tal juanito?",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d4671cc8ce08e2b45ec162"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T03:52:53.276Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e97"
+  },
+  "text": "Hola luis!!",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d6a08ba8d542607f3d0673"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T03:55:19.051Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e93"
+  },
+  "text": "Hola Carlos!!",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d6a098a8d542607f3d068f"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T03:55:19.064Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "text": "Hola Pedro!!",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d6a0b7a8d542607f3d06c5"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T03:55:19.095Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "text": "Que pasa Juan??",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d6a418a8d542607f3d0818"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T03:55:19.960Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "text": "Hola crack!!",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d6a535a8d542607f3d0890"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T03:55:20.245Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "text": "Hola Juan!",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d6a541a8d542607f3d08a1"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T03:55:20.257Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "text": "Como estas?",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d6a54aa8d542607f3d08a7"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T03:55:20.266Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "text": "Estoy esperando a que hagas una receta nueva",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d6a55da8d542607f3d08b8"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T03:55:20.285Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "text": "Esta en camino, a ver si subes alguna india tu",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d6a568a8d542607f3d08be"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T03:55:20.296Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "text": "el otro dia pobre un restaurante indio en madrid",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d6a56ca8d542607f3d08c4"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T03:55:20.300Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "text": "estaba buenisimo",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d6a579a8d542607f3d08d5"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T03:55:20.313Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "text": "cual era el nombre?",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d6a584a8d542607f3d08ed"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T03:55:20.324Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "text": "No me acuerdo ajjajajaj",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d6a596a8d542607f3d0903"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T03:55:20.342Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "text": "pero se lo pregunto a mis padres, que fui con ellos",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d6a59fa8d542607f3d0911"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T03:55:20.351Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "text": "vale genial!!",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d6a5a7a8d542607f3d0917"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T03:55:20.359Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "text": "me han entrado ganas de ir",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d6a5aca8d542607f3d091d"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T03:55:20.364Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "text": "dimelo cunado puedas",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d99d55d43c4e09cd8c010f"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T03:58:34.837Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e92"
+  },
+  "text": "Hola Ana!",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d99ddfd43c4e09cd8c0119"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T03:58:34.975Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "text": "Que tal estas?",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d99e39d43c4e09cd8c0131"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T03:58:35.065Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "text": "Hola pedro!!",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d99e4fd43c4e09cd8c0142"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T03:58:35.087Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "text": "quedamos para cocinar?",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d99e53d43c4e09cd8c0148"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T03:58:35.091Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "text": "valeee",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67db090ed91933083f8abcac"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T04:00:07.950Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e93"
+  },
+  "text": "holaaaa",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f53f5008302858b970f4f0"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T04:28:45.776Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "text": "hola rey",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f5437708302858b970f85c"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T04:28:46.839Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e93"
+  },
+  "text": "hoal bro",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f5437b08302858b970f862"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T04:28:46.843Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e93"
+  },
+  "text": "como estas",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f65cfcd35b44959f5a4cd8"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T04:29:58.908Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e93"
+  },
+  "text": "holaaa",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f65d11d35b44959f5a4cde"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T04:29:58.929Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e99"
+  },
+  "text": "Buenas tardes",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f65d19d35b44959f5a4ce4"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T04:29:58.937Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e99"
+  },
+  "text": "que tal?",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68091b5ca3d79fc46cbc8fee"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T04:50:27.292Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e93"
+  },
+  "text": "buenas tardes",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68091b63a3d79fc46cbc8ff4"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T04:50:27.299Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e93"
+  },
+  "text": "vamos a hacer una nueva receta juntos",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68091b66a3d79fc46cbc8ffa"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T04:50:27.302Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e93"
+  },
+  "text": "me ayudas??",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68091b80a3d79fc46cbc9012"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T04:50:27.328Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "text": "hola pedro",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68091b86a3d79fc46cbc9018"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T04:50:27.334Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "text": "hacemos una receta juntos???",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68091b8ea3d79fc46cbc9029"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T04:50:27.342Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "text": "venga vamos",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68091b98a3d79fc46cbc903a"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T04:50:27.352Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "text": "que quieres hacer??ç",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68236e63e5c55de033b6a9e7"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T05:19:12.483Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e99"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "text": "Hola Juan!",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68236eb5e5c55de033b6a9ed"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T05:19:12.565Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e99"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "text": "Muy bien, y tu?",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68236ecbe5c55de033b6a9f3"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T05:19:12.587Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e99"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "text": "He estado viendo tu perfil y voy a probar la última receta que has subido",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68236ed1e5c55de033b6a9f9"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T05:19:12.593Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e99"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "text": "Estoy deseando jj",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68236edde5c55de033b6aa18"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T05:19:12.605Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e99"
+  },
+  "text": "Hola miguel!",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68236ee2e5c55de033b6aa1e"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T05:19:12.610Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e99"
+  },
+  "text": "estoy bien",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68236ef0e5c55de033b6aa24"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T05:19:12.624Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e99"
+  },
+  "text": "empezando con Rechefy a subir mis propias recetas",
+  "viewed": "false",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68236ef6e5c55de033b6aa2a"
+  },
+  "createdAt": {
+    "$date": "1970-01-21T05:19:12.630Z"
+  },
+  "emitter": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "receiver": {
+    "$oid": "679e6ea7da2a548f69091e99"
+  },
+  "text": "y a aprender nuevas",
+  "viewed": "false",
+  "__v": 0
+}]
