@@ -96,8 +96,6 @@ async function deletePublication(req, res) {
 async function getMyPublications(req, res) {
     try {
         let userId = req.user.sub;
-        console.log(userId);
-        console.log(req.params.userId !== null);
         if(req.params.userId != null) userId = req.params.userId;
     
         const publications = await Publication.find({ user: userId }).sort('-createdAt').exec();
@@ -207,7 +205,6 @@ function getImageFile(req, res) {
 async function sendLike(req, res) {
     try {
         const publicationId = req.params.publicationId;
-        console.log(publicationId);
         const userId = req.user.sub;
 
         // Obtener publicación para saber el autor
