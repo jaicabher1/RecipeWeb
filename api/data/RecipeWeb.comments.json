@@ -1,0 +1,144 @@
+[{
+  "_id": {
+    "$oid": "67d6ad4fa8d542607f3d1034"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "publication": {
+    "$oid": "679e6ea7da2a548f69091ea9"
+  },
+  "text": "Grande Pedro!!",
+  "createdAt": {
+    "$date": "2025-03-16T10:51:59.993Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d6af30a8d542607f3d12ae"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "publication": {
+    "$oid": "679e6ea7da2a548f69091eb8"
+  },
+  "text": "Recetón",
+  "createdAt": {
+    "$date": "2025-03-16T11:00:00.039Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d6af63a8d542607f3d162b"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "publication": {
+    "$oid": "679e6ea7da2a548f69091eb8"
+  },
+  "text": "recetaza",
+  "createdAt": {
+    "$date": "2025-03-16T11:00:51.916Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d6b00ca8d542607f3d173f"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "publication": {
+    "$oid": "679e6ea7da2a548f69091eb8"
+  },
+  "text": "que pintaza!!",
+  "createdAt": {
+    "$date": "2025-03-16T11:03:40.501Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d6b105a8d542607f3d1acc"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "publication": {
+    "$oid": "679e6ea7da2a548f69091eaa"
+  },
+  "text": "Que buenoooo",
+  "createdAt": {
+    "$date": "2025-03-16T11:07:49.541Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d6b223a8d542607f3d1c40"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e92"
+  },
+  "publication": {
+    "$oid": "679e6ea7da2a548f69091ea9"
+  },
+  "text": "Deliciiiiosooooooo pedro",
+  "createdAt": {
+    "$date": "2025-03-16T11:12:35.626Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dae97615d878c99024f720"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "publication": {
+    "$oid": "679e6ea7da2a548f69091ea6"
+  },
+  "text": "lo probaré :)",
+  "createdAt": {
+    "$date": "2025-03-19T15:57:42.554Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f65c2dd35b44959f5a4b7b"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "publication": {
+    "$oid": "679e6ea7da2a548f69091ea6"
+  },
+  "text": "Me encanrt",
+  "createdAt": {
+    "$date": "2025-04-09T11:38:21.573Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68091b01a3d79fc46cbc8fe1"
+  },
+  "user": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "publication": {
+    "$oid": "679e6ea7da2a548f69091ea9"
+  },
+  "text": "guapoooo",
+  "createdAt": {
+    "$date": "2025-04-23T16:53:21.676Z"
+  },
+  "__v": 0
+}]

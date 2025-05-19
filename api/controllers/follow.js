@@ -24,7 +24,7 @@ async function saveFollow(req, res) {
             followed: follow.followed,
         });
         if (existingFollow) {
-            return res.status(200).send({ message: 'Ya sigues a este usuario' });
+            return res.status(409).send({ message: 'Ya sigues a este usuario' });
         }
 
         const followStored = await follow.save();
@@ -41,8 +41,8 @@ async function saveFollow(req, res) {
 
 async function deleteFollow(req, res) {
     try {
-        const userId = req.user.sub; 
-        const followedId = req.params.id;
+        const userId = req.user.sub;
+        const followedId = req.body.id;
 
         const follow = await Follow.findOneAndDelete({
             user: userId,
@@ -63,16 +63,16 @@ async function deleteFollow(req, res) {
 //Obtener los usuarios que sigo
 async function getMyFollows(req, res) {
     try {
-        const userId = req.user.sub; 
+        const userId = req.user.sub;
         const follows = await Follow.find({ user: userId })
-        .populate({
-            path: 'followed', 
-            select: 'name' 
-        })
-        .populate({
-            path: 'user', 
-            select: 'name' 
-        });
+            .populate({
+                path: 'followed',
+                select: 'name nick surname image',
+            })
+            .populate({
+                path: 'user',
+                select: 'name nick surname image',
+            });
         if (!follows || follows.length === 0) {
             return res.status(404).send({ message: 'No sigues a ningún usuario' });
         }
@@ -87,16 +87,16 @@ async function getMyFollows(req, res) {
 //Obtener los usuarios que me siguen
 async function getFollowBacks(req, res) {
     try {
-        const userId = req.user.sub; 
+        const userId = req.user.sub;
         const follows = await Follow.find({ followed: userId })
-        .populate({
-            path: 'followed', 
-            select: 'name' 
-        })
-        .populate({
-            path: 'user', 
-            select: 'name' 
-        });
+            .populate({
+                path: 'followed',
+                select: 'name nick image',
+            })
+            .populate({
+                path: 'user',
+                select: 'name nick image',
+            });
         if (!follows || follows.length === 0) {
             return res.status(404).send({ message: 'No sigues a ningún usuario' });
         }
@@ -114,5 +114,5 @@ module.exports = {
     deleteFollow,
     getMyFollows,
     getFollowBacks
-};  
+};
 

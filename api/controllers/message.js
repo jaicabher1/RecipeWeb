@@ -34,59 +34,39 @@ async function sendMessage(req, res) {
 
 async function getReceivedMessages(req, res) {
     try {
-        var userId = req.user.sub;
-        var page = parseInt(req.params.page) || 1; // Asegurar que page sea un número
-        var itemsPerPage = 4;
+        const userId = req.user.sub;
 
-        let messages = await Message.find({ receiver: userId })
-            .populate('emitter', 'name surname _id nick image') //Sacamos los datos del emisor en el populate 
-            .sort('-createdAt')
-            .skip((page - 1) * itemsPerPage)
-            .limit(itemsPerPage);
+        const messages = await Message.find({ receiver: userId })
+            .populate('emitter', 'name surname _id nick image')
+            .sort('-createdAt');
 
-        let totalMessages = await Message.countDocuments({ receiver: userId });
-
-        return res.status(200).send({
-            messages,
-            total: totalMessages,
-            pages: Math.ceil(totalMessages / itemsPerPage),
-            currentPage: page
-        });
+        return res.status(200).send({ messages });
     } catch (error) {
         return res.status(500).send({ message: 'Error en la petición', error });
     }
 }
+
 
 async function getEmittedMessages(req, res) {
     try {
-        var userId = req.user.sub;
-        var page = parseInt(req.params.page) || 1; // Asegurar que page sea un número
-        var itemsPerPage = 4;
+        const userId = req.user.sub;
 
-        let messages = await Message.find({ emitter: userId })
-            .populate('receiver', 'name surname _id nick image') //Sacamos los datos del emisor en el populate 
-            .sort('-createdAt')
-            .skip((page - 1) * itemsPerPage)
-            .limit(itemsPerPage);
+        const messages = await Message.find({ emitter: userId })
+            .populate('receiver', 'name surname _id nick image')
+            .sort('-createdAt');
 
-        let totalMessages = await Message.countDocuments({ receiver: userId });
-
-        return res.status(200).send({
-            messages,
-            total: totalMessages,
-            pages: Math.ceil(totalMessages / itemsPerPage),
-            currentPage: page
-        });
+        return res.status(200).send({ messages });
     } catch (error) {
         return res.status(500).send({ message: 'Error en la petición', error });
     }
 }
+
 
 async function getUnviewedMessages(req, res) {
     try {
         var userId = req.user.sub;
 
-        let messages = await Message.countDocuments({ receiver: userId, viewed: 'false' }); 
+        let messages = await Message.countDocuments({ receiver: userId, viewed: 'false' });
 
         return res.status(200).send({ 'unviewed': messages });
     } catch (error) {
@@ -117,4 +97,3 @@ module.exports = {
     setViewedMessages
 };
 
-    

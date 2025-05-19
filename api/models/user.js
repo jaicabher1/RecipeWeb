@@ -28,7 +28,10 @@ var UserSchema = new Schema({
     bio: { type: String, maxlength: 250 }, 
     location: { type: String, trim: true },
     isVerified: { type: Boolean, default: false },
-    image: String, 
+    image: {
+        type: String,
+        default:"assets/users/chef.jpg"
+    }, 
     phoneNumber: { 
         type: String, 
         match: [/^\+?[0-9]{10,15}$/, 'Por favor, ingresa un número de teléfono válido.'] 

@@ -25,6 +25,7 @@ function saveUser(req, res) {
         user.surname = params.surname || null; // Si no se pasa apellido, se asigna null
         user.email = params.email.toLowerCase();
         user.nick = params.nick.toLowerCase();
+         
         
         // Busca si ya existe un usuario con el mismo email o nick
         User.find({ 
@@ -42,7 +43,7 @@ function saveUser(req, res) {
                     user.bio = params.bio || null; 
                     user.location = params.location || null; 
                     user.isVerified = params.isVerified || null; // Asignar null o el valor real si es proporcionado
-                    user.image = params.image || null; 
+                    user.image = params.image || 'chef.jpg'; 
                     user.phoneNumber = params.phoneNumber || null;
                     user.createdAt = Date.now();
 
@@ -81,43 +82,37 @@ function saveUser(req, res) {
 
 function loginUser(req, res) {
     var params = req.body;
-
+  
     var email = params.email;
     var password = params.password;
-
-    User.findOne({
-        email: email
-    }).then(user => {
-        if (user) {
-            // Compara la contraseña en texto claro con la cifrada en la base de datos
-            bcrypt.compare(password, user.password, check => {
-                if (check) {
-                    // Si se pide el token
-                    if (params.gettoken) {
-                        // Generar y devolver el token
-                        return res.status(200).send({
-                            token: jwt.createToken(user)
-                        });
-                    } else {
-                        // Devolver datos del usuario (sin la contraseña)
-                        user.password = undefined;
-                        res.status(200).send({ user });
-                    }
-                } else {
-                    res.status(404).send({ message: 'Contraseña incorrecta' });
-                }
-            });
-        } else {
-            res.status(404).send({ message: 'No existe el usuario!!!' });
-        }
+  
+    User.findOne({ email: email }).then(user => {
+      if (user) {
+        bcrypt.compare(password, user.password, (err, check) => {
+          if (err) return res.status(500).send({ message: 'Error al comparar contraseña' });
+  
+          if (check) {
+            if (params.gettoken) {
+              return res.status(200).send({
+                token: jwt.createToken(user)
+              });
+            } else {
+              user.password = undefined;
+              return res.status(200).send({ user });
+            }
+          } else {
+            return res.status(401).send({ message: 'Contraseña incorrecta' });
+          }
+        });
+      } else {
+        return res.status(404).send({ message: 'No existe el usuario' });
+      }
     }).catch(err => {
-        console.error(err);
-        res.status(500).send({ message: 'Error en la petición' });
+      console.error(err);
+      return res.status(500).send({ message: 'Error en la petición' });
     });
-}
-
-
-
+  }
+  
 function getUser(req, res) {
     var userId = req.params.id;
 
@@ -126,7 +121,12 @@ function getUser(req, res) {
             if (user) {
                 followThisUser(req.user.sub, userId)
                     .then((value) => {
-                        res.status(200).send({ user, following: value.following, followed: value.followed });
+                        user.password = undefined;
+                        // Obtener el número de publicaciones, following y followed 
+                        getCountFollow(userId).then((value) => {
+                            res.status(200).send({ user, following: value.following, followed: value.followed, publications: value.publications });
+                        });
+                        
                     })
             } else {
                 res.status(404).send({ message: 'El usuario no existe' });
@@ -176,36 +176,23 @@ async function followUserIds(user_id) {
     
 }
 
-// Devolver usuarios paginados
+//Devolver un listado de usuarios sin paginar
 function getUsers(req, res) {
     const identity_user_id = req.user.sub;
-    let page = parseInt(req.params.page, 10) || 1; // Página por defecto
-    const itemsPerPage = 5; // Número de usuarios por página
-
-    User.paginate({}, { page: page, limit: itemsPerPage, sort: { _id: 1 } })
-        .then(result => {
-            if (!result || result.docs.length === 0) {
+    try {
+        const users = User.find().sort('_id');
+        users.then((users) => {
+            if (!users) {
                 return res.status(404).send({ message: 'No hay usuarios disponibles' });
             }
-
-            // Total de usuarios y páginas
-            const totalUsers = result.totalDocs;
-            const totalPages = Math.ceil(totalUsers / itemsPerPage); 
             followUserIds(identity_user_id).then((value) => {
-                return res.status(200).send({
-                    users: result.docs,
-                    users_following: value.following,
-                    users_follow_me: value.followed,
-                    total: totalUsers,
-                    pages: totalPages,
-                });
+                return res.status(200).send({ users, following: value.following, followed: value.followed });
             });
-
-        })
-        .catch(err => {
-            console.error(err);
-            return res.status(500).send({ message: 'Error en la petición' });
-        });
+        });      
+    } catch (error) {
+        console.error(error);
+        return res.status(500).send({ message: 'Error en la petición' });        
+    }    
 }
 
 function updateUser(req, res) {
@@ -231,7 +218,6 @@ function updateUser(req, res) {
             return res.status(500).send({ message: 'Error en la petición' });
         });
 }
-
 const fs = require('fs');
 
 function uploadImage(req,res) {
@@ -304,7 +290,6 @@ async function getCountFollow(userId) {
     };
     
 }
-
 //Exportar las funciones para que esten disponibles en otros archivos
 module.exports = {
     home,

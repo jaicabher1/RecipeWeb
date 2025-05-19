@@ -9,7 +9,6 @@ var MessageSchema = Schema({
     // El usuario que recibe el mensaje
     receiver : { type: Schema.ObjectId, ref: 'User' },
     text: String,
-    file: String,
     viewed: String,
     createdAt: {
         type: Date,

@@ -1,0 +1,251 @@
+[{
+  "_id": {
+    "$oid": "679e6ea7da2a548f69091e94"
+  },
+  "name": "Lucia",
+  "surname": "Martinez",
+  "email": "lucia@example.com",
+  "nick": "luciam",
+  "password": "$2a$10$E1g6Oe05rWwTYITMidwbzuI1BfkHhBPlzRaVvYzOaSHJUZOlSNPyW",
+  "role": "ROLE_USER",
+  "bio": null,
+  "location": null,
+  "image": "5kJPMJDw8SPjjNc-TU6jl8CO.jpg",
+  "isVerified": false,
+  "createdAt": {
+    "$date": "2025-02-01T18:57:43.021Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "679e6ea7da2a548f69091e91"
+  },
+  "name": "Juan",
+  "surname": "Perez",
+  "email": "juan@example.com",
+  "nick": "juanp",
+  "password": "$2a$10$E1g6Oe05rWwTYITMidwbzuI1BfkHhBPlzRaVvYzOaSHJUZOlSNPyW",
+  "bio": "Soy el mejor chef del mundo",
+  "location": "Merida",
+  "image": "f_pq60dH-kYceL5kzkprFIFi.jpg",
+  "role": "ROLE_USER",
+  "isVerified": false,
+  "createdAt": {
+    "$date": "2025-02-01T18:57:43.019Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "679e6ea7da2a548f69091e93"
+  },
+  "name": "Carlos",
+  "surname": "Garcia",
+  "email": "carlos@example.com",
+  "nick": "carlosg",
+  "password": "$2a$10$E1g6Oe05rWwTYITMidwbzuI1BfkHhBPlzRaVvYzOaSHJUZOlSNPyW",
+  "bio": null,
+  "location": null,
+  "image": "_csPqS73XCuYkpIMN5DV4TtU.jpg",
+  "role": "ROLE_USER",
+  "isVerified": false,
+  "createdAt": {
+    "$date": "2025-02-01T18:57:43.020Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "679e6ea7da2a548f69091e92"
+  },
+  "name": "Ana",
+  "surname": "Juana",
+  "email": "ana@example.com",
+  "nick": "anjuana2",
+  "password": "$2a$10$E1g6Oe05rWwTYITMidwbzuI1BfkHhBPlzRaVvYzOaSHJUZOlSNPyW",
+  "bio": "La mejor",
+  "location": "España",
+  "image": "XnXTlQU1w2sC6u45esKLbs06.jpg",
+  "role": "ROLE_USER",
+  "isVerified": false,
+  "createdAt": {
+    "$date": "2025-02-01T18:57:43.020Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "679e6ea7da2a548f69091e97"
+  },
+  "name": "Luis",
+  "surname": "Sanchez",
+  "email": "luis@example.com",
+  "nick": "luiss",
+  "password": "$2a$10$E1g6Oe05rWwTYITMidwbzuI1BfkHhBPlzRaVvYzOaSHJUZOlSNPyW",
+  "bio": "La mejor",
+  "location": "España",
+  "image": "vrCYBjHcr7Ap-GCXbUUFUtHh.jpg",
+  "role": "ROLE_USER",
+  "isVerified": true,
+  "createdAt": {
+    "$date": "2025-02-01T18:57:43.022Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "679e6ea7da2a548f69091e98"
+  },
+  "name": "Laura",
+  "surname": "Rodriguez",
+  "email": "laura@example.com",
+  "nick": "laurar",
+  "password": "$2a$10$E1g6Oe05rWwTYITMidwbzuI1BfkHhBPlzRaVvYzOaSHJUZOlSNPyW",
+  "role": "ROLE_USER",
+  "bio": "La mejor",
+  "location": "España",
+  "image": "user-12-W.jpg",
+  "isVerified": false,
+  "createdAt": {
+    "$date": "2025-02-01T18:57:43.022Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "679e6ea7da2a548f69091e99"
+  },
+  "name": "Miguel",
+  "surname": "Perez",
+  "email": "miguel@example.com",
+  "nick": "miguelp",
+  "password": "$2a$10$E1g6Oe05rWwTYITMidwbzuI1BfkHhBPlzRaVvYzOaSHJUZOlSNPyW",
+  "bio": "La mejor",
+  "location": "España",
+  "image": "user-8.jpg",
+  "role": "ROLE_USER",
+  "isVerified": false,
+  "createdAt": {
+    "$date": "2025-02-01T18:57:43.022Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "679e6ea7da2a548f69091e9a"
+  },
+  "name": "Sofia",
+  "surname": "Martinez",
+  "email": "sofia@example.com",
+  "nick": "sofia",
+  "password": "$2a$10$E1g6Oe05rWwTYITMidwbzuI1BfkHhBPlzRaVvYzOaSHJUZOlSNPyW",
+  "bio": "La mejor",
+  "location": "España",
+  "image": "D9DefDNz6pJKUygKT77PyK-W.jpg",
+  "role": "ROLE_USER",
+  "isVerified": false,
+  "createdAt": {
+    "$date": "2025-02-01T18:57:43.024Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "679e6ea7da2a548f69091e95"
+  },
+  "name": "Pedro",
+  "surname": "Álvarez",
+  "email": "pedro@example.com",
+  "nick": "pedrog",
+  "password": "$2a$10$E1g6Oe05rWwTYITMidwbzuI1BfkHhBPlzRaVvYzOaSHJUZOlSNPyW",
+  "bio": "EL mejor chef",
+  "location": "España",
+  "image": "xKKvNT0YSbV6PHW3ky-E3Ju1.jpg",
+  "role": "ROLE_USER",
+  "isVerified": false,
+  "createdAt": {
+    "$date": "2025-02-01T18:57:43.021Z"
+  },
+  "__v": 0,
+  "phoneNumber": ""
+},
+{
+  "_id": {
+    "$oid": "679e6ea7da2a548f69091e96"
+  },
+  "name": "Maria",
+  "surname": "Fernandez",
+  "email": "maria@example.com",
+  "nick": "mariaf",
+  "password": "$2a$10$E1g6Oe05rWwTYITMidwbzuI1BfkHhBPlzRaVvYzOaSHJUZOlSNPyW",
+  "bio": "La mejor",
+  "location": "España",
+  "image": "lN8fEkphY7SF7EWsEmhomEsU.jpg",
+  "role": "ROLE_USER",
+  "isVerified": false,
+  "createdAt": {
+    "$date": "2025-02-01T18:57:43.022Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67a38ea72735a3c819a25160"
+  },
+  "role": "ROLE_USER",
+  "isVerified": null,
+  "createdAt": {
+    "$date": "2025-02-05T16:15:35.556Z"
+  },
+  "name": "Gabriel",
+  "surname": null,
+  "email": "gabriel@example.com",
+  "nick": "gabric",
+  "bio": null,
+  "location": null,
+  "image": "Y9Sy4NkrYpkUa6oWih38pMjX.jpg",
+  "phoneNumber": null,
+  "password": "$2a$10$0T8DCF9rf63grHrf6pLBcuKR/zAchsTSO/HBWbrYbIN.CLcfd4pOy",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d46ae5c861ce3877fce352"
+  },
+  "role": "ROLE_USER",
+  "isVerified": null,
+  "image": "QRH83TJ_bdFZXO0spc07FxWF.jpg",
+  "createdAt": {
+    "$date": "2025-03-14T17:44:05.792Z"
+  },
+  "name": "Alejandra",
+  "surname": "Fernandez",
+  "email": "alejandra@example.com",
+  "nick": "alefernandez",
+  "bio": null,
+  "location": null,
+  "phoneNumber": null,
+  "password": "$2a$10$E1g6Oe05rWwTYITMidwbzuI1BfkHhBPlzRaVvYzOaSHJUZOlSNPyW",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682214befd0b8ccb619194d8"
+  },
+  "role": "ROLE_USER",
+  "isVerified": null,
+  "image": "chef.jpg",
+  "createdAt": {
+    "$date": "2025-05-12T15:33:18.301Z"
+  },
+  "name": "Pepe",
+  "surname": "Merino",
+  "email": "pepemmmm@example.com",
+  "nick": "sdfasd",
+  "bio": null,
+  "location": null,
+  "phoneNumber": "+34646795999",
+  "password": "$2a$10$DWuKxLI4ia3ISaJ0WWkkP.nfwwmoo.QJVULyUqubjo6yuAsZHDUUK",
+  "__v": 0
+}]
